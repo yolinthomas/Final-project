@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatting</title>
+    <style>
+      body{
+        background-color:rgb(221, 183, 160);
+        align-items:center;
+        justify-content:center;
+
+      }
+      .box{
+       margin-top: 30px;
+        height: 700px;
+        width: 450px;
+        background-color:rgb(251, 249, 152);
+        align-items:bottom;
+        border-radius: 10px;
+        padding: 3px;
+        margin-bottom: 20px;
+      }
+
+       input{
+        margin-top: 520px;
+        height: 30px;
+        width: 350px;
+        border-radius: 20px;
+        border:none;
+        padding: 10px;
+        
+      }
+      button{
+        height: 30px;
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        background-color:rgb(255, 208, 0);
+        color:rgb(11, 11, 11);
+        
+
+      }
+      h2{
+        color:rgb(213, 150, 68);
+        background-color:black;
+        padding: 10px; 
+        border-radius: 10px;
+      }
+      h1{
+        color:rgb(161, 72, 72);
+      }
+      h3{
+        color:darkgreen;
+      }
+
+    </style>
+  </head>
+  <body>
+
+  <center>
+    
+   <div class="box">
+    <h1>University FAQ-
+       Chat Bot</h1>
+    
+    	{% if  message %}
+	  <h3>output:</h3>
+
+	  <h2>{{message}}</h2>
+        {%endif%}
+    <form method="POST">
+    <input type="text" name="prompt">
+    <button type="submit">submit</button>
+</form>
+</div>
+  </center>
+
+  </body>
+</html>
